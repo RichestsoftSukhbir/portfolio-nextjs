@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #8843f2;
+    --primary-color-900: #5319ac;
+
+    --glassmorph-bg: rgba(255, 255, 255, .25);
+    --glassmorph-border: rgba(255, 255, 255, .18);
+
+    --body-color: #080c24;
+    --theme-text: #f5eded;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    cursor: none;
+}
+
+:hover {
+    cursor: none;
+}
+
+body {
+    font-size: clamp(0.875rem, 0.8154rem + 0.2981vw, 1rem);
+    color: var(--theme-text);
+    background-color: var(--body-color);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    font-weight: 600;
+}
+
+h6,
+.h6 {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* utils */
+.button-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.theme_button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    color: #f5eded;
+    font-family: Space Mono, monospace;
+    border-radius: 10px;
+    background: var(--glassmorph-bg);
+    backdrop-filter: blur(7px);
+    border: 1px solid var(--glassmorph-border);
+    box-shadow: 0 10px 30px -15px var(--primary-color-900);
+    transition: all .3s ease
+}
+
+.theme_button:hover {
+    transform: translateY(-5px)
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.spacer-y {
+    padding: 60px 0;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+#trail-cursor {
+	position: fixed;
+	display: block;
+	border-radius: 0;
+	transform-origin: center center;
+	mix-blend-mode: difference;
+	top: 0;
+	left: 0;
+	z-index: 10000000000000000;
+}
+
+.circle {
+	pointer-events: none;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* utils ends */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 70%;
+    }
+}

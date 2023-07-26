@@ -1,0 +1,21 @@
+{
+    "titles": {
+        "intro": "Hello!<span>👋🏻</span>, I'm <span class=\"primary-color\">Sukhbir Singh.</span>",
+        "about": ".about(me);",
+        "tech": ".techSkills()",
+        "work": ".work()"
+    },
+    "subText": {
+        "introSub": "I'm a <span class=\"age\"></span>-years-old Self-Taught Graphic Designer & Front-End Developer!!",
+        "techSub": "A list of my favorite tools and technologies that I use on a regular basis."
+    },
+    "aboutText": {
+        "1": "I am a 20 year old self-taught Graphic Designer & Front-End Web Developer, and now I am a final-year student pursuing a degree in Computer Science here in India. I am proficient in frontend development and graphic designing. Likewise, I have 5 years of experience in Graphic Designing & 2 years of experience in Front-End Development. I have built and maintained many websites for clients.",
+        "2": "I am passionate about the technology industry and want to get involved in new opportunities.",
+        "3": "Worked at Axionic Software for 1.5 Years as a Web Developer and Graphic Designer.",
+        "4": "Currently I am working as Web Developer at RichestSoft."
+    },
+    "footer": {
+        "copyright": "Copyright by SukhOP. All Rights Reserved."
+    }
+}

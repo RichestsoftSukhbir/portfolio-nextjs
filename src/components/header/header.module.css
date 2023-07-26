@@ -1,0 +1,38 @@
+.header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+    z-index: 999;
+}
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item-left,
+.item-right {
+    flex: 0 0 auto;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.logo span {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+.logo:hover span {
+    translate: 0 -3px;
+}
+.logo img {
+    width: 30px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
