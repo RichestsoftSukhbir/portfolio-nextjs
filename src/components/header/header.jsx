@@ -9,7 +9,7 @@ import TrailCursor from '../train-cursor/trailCursor';
 export default function Header() {
     return (
         <>
-        <header className={styles['header']}>
+        <header className={`${styles['header']} ${styles['glass']}`}>
             <div className="container">
                 <nav className={styles['navigation-bar']}>
                     <div className={styles['item-left']}>
@@ -22,10 +22,10 @@ export default function Header() {
                     </div>
                     <div className={styles['item-right']}>
                         <ul className={`${styles['menu-list']} list-unstyled mb-0`}>
-                            <li><Link href='/'>.home()</Link></li>
-                            <li><Link href='/work'>.work()</Link></li>
-                            <li><Link href='/tech'>.tech()</Link></li>
-                            <li><Link href='mailto:sukhbircing@gmail.com'>.contact()</Link></li>
+                            <li><Link href='/' className='link'>.home()</Link></li>
+                            <li><Link href='/work' className='link'>.work()</Link></li>
+                            <li><Link href='/tech' className='link'>.tech()</Link></li>
+                            <li><Link href='mailto:sukhbircing@gmail.com' className='link'>.contact()</Link></li>
                         </ul>
                     </div>
                 </nav>

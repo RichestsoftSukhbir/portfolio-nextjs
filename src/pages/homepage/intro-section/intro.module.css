@@ -4,6 +4,34 @@
     align-items: center;
 }
 
+.profile-image {
+    position: relative;
+    padding: 70px 0;
+}
+
+.profile-image .tech-wrapper[data-position="6"] {
+    top: 23%;
+    left: 5%
+}
+.profile-image .tech-wrapper[data-position="7"] {
+    right: 10%;
+    top: 10%;
+    z-index: 1
+}
+.profile-image .tech-wrapper[data-position="19"] {
+    bottom: 35%;
+    left: 0%;
+    z-index: 1
+}
+.profile-image .tech-wrapper[data-position="22"] {
+    right: 0;
+    top: 40%
+}
+.profile-image .tech-wrapper[data-position="5"] {
+    bottom: 10%;
+    right: 25%
+}
+
 .seld-image {
     position: relative;
     z-index: 2;
@@ -12,8 +40,8 @@
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #8843F2;
-    box-shadow: 0 10px 30px -15px #5319ac;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 10px 30px -15px var(--y-color-900);
     animation: levitate 5s infinite linear;
 }
 
@@ -21,12 +49,15 @@
     0% {
         transform: translateY(0)
     }
+
     25% {
         transform: translateY(-5px)
     }
+
     50% {
         transform: translateY(5px)
     }
+
     to {
         transform: translateY(0)
     }

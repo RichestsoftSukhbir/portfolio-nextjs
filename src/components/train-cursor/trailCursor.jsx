@@ -5,7 +5,6 @@ export default function TrailCursor() {
 
     useEffect(() => {
         let trailCursor = document.querySelector("#trail-cursor");
-        console.log(trailCursor);
         let circles = trailCursor.getAttribute("data-circle");
         let coords = {
             x: 0,
@@ -51,9 +50,9 @@ export default function TrailCursor() {
         }
 
         animeCircle();
-    });
+    }, []);
 
-    return(
+    return (
         <>
             <div id={`trail-cursor`} data-circle="20"></div>
         </>

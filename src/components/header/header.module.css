@@ -4,11 +4,24 @@
     padding: 1rem 0;
     z-index: 999;
 }
+
+.header.glass {
+    background: var(--glassmorph-bg);
+    backdrop-filter: blur(7px);
+    border: 1px solid var(--glassmorph-border);
+    box-shadow: 0 10px 30px -15px var(--primary-color-900);
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    background-color: #080c244d;
+}
+
 .navigation-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .item-left,
 .item-right {
     flex: 0 0 auto;
@@ -19,13 +32,16 @@
     gap: 10px;
     align-items: center;
 }
+
 .logo span {
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
+
 .logo:hover span {
     translate: 0 -3px;
 }
+
 .logo img {
     width: 30px;
 }

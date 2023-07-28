@@ -6,7 +6,7 @@ import '@/styles/global.css';
 
 import Header from '@/components/header/header';
 import Footer from "@/components/footer/footer";
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {
 
@@ -16,6 +16,37 @@ export default function MyApp({ Component, pageProps }) {
   //     e.classList.add(prompt.className);
   //   });
   // });
+
+  useEffect(() => {
+    let links = document.querySelectorAll(".link");
+
+    links.forEach(function (e) {
+      let innerText = e.innerText;
+      e.innerText = "";
+
+      let textContainer = document.createElement("div");
+      textContainer.className = "block";
+
+      for (let letters of innerText) {
+        let span = document.createElement("span");
+        span.innerText = letters.trim() === "" ? "\xa0" : letters;
+        span.className = "letters";
+        textContainer.appendChild(span);
+      }
+
+      e.appendChild(textContainer);
+      e.appendChild(textContainer.cloneNode(true));
+    });
+
+    let blocks = document.querySelectorAll(".block");
+    blocks.forEach(function (el) {
+      let j = 0;
+      for (let i = 0; i < el.children.length; i++) {
+        el.children[i].style.transitionDelay = `${j}s`;
+        j += 0.03;
+      }
+    });
+  }, []);
 
   return (
     <div className={spaceMono.className}>
