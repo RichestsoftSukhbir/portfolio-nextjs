@@ -3,7 +3,8 @@
         "intro": "Hello!<span>👋🏻</span>, I'm <span class=\"primary-color\">Sukhbir Singh.</span>",
         "about": ".about<span class=\"primary-color\">(me)</span>;",
         "tech": ".techSkills<span class=\"primary-color\">()</span>",
-        "work": ".work<span class=\"primary-color\">()</span>"
+        "work": ".work<span class=\"primary-color\">()</span>",
+        "social": ".find<span class=\"primary-color\">(me)</span>"
     },
     "subText": {
         "introSub": "I'm a <span class=\"age\"></span>-years-old Self-Taught Graphic Designer & Front-End Developer!!",

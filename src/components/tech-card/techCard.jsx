@@ -11,7 +11,7 @@ export default function TechCard({ nth, size, mode }) {
     return (
         <div className={`tech-wrapper ${introStyles['tech-wrapper']} ${styles['tech-wrapper']} ${styles[mode]}`} key={nth} data-position={nth}>
             <div className='tech-img'>
-                <Image src={img[nth]} width={size} height={size} alt='photoshop' />
+                <Image src={img[nth]} width={size} height={size} alt={techText[nth]} />
             </div>
             <div className={`${styles['tech-text']} ${prompt.className}`}>
                 {techText[nth]}

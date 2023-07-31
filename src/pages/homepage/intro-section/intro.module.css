@@ -32,12 +32,13 @@
     right: 25%
 }
 
-.seld-image {
+.self-image {
+    --size: 300px;
     position: relative;
     z-index: 2;
     margin: auto;
-    width: 300px;
-    height: 300px;
+    width: var(--size);
+    height: var(--size);
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid var(--primary-color);
@@ -60,5 +61,11 @@
 
     to {
         transform: translateY(0)
+    }
+}
+
+@media (max-width: 480px) {
+    .self-image {
+        --size: 200px;
     }
 }

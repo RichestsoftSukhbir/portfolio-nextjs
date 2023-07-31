@@ -1,0 +1,18 @@
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.social-btn {
+    --size: 50px;
+    height: var(--size);
+    width: var(--size);
+    display: grid;
+    place-items: center;
+    padding: 0;
+    font-size: 1.2rem;
+}
+.social-btn a {
+    display: block;
+}

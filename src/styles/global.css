@@ -6,6 +6,7 @@
     --glassmorph-border: rgba(255, 255, 255, .18);
 
     --body-color: #080c24;
+    --spotify-color: #1ED760;
     --theme-text: #f5eded;
 }
 
@@ -13,6 +14,7 @@
     color: var(--theme-text);
     background: var(--primary-color-900);
 }
+
 ::selection {
     color: var(--theme-text);
     background: var(--primary-color-900);
@@ -42,6 +44,21 @@ body {
     font-size: clamp(0.875rem, 0.8154rem + 0.2981vw, 1rem);
     color: var(--theme-text);
     background-color: var(--body-color);
+}
+
+body::before,
+body::after {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    content: '';
+}
+
+body::before {
+    filter: url(#f);
+    background-color: var(--body-color);
+    mix-blend-mode: color;
 }
 
 h1,
@@ -74,6 +91,7 @@ img {
 /* utils */
 .button-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
 }
@@ -100,11 +118,12 @@ img {
 }
 
 .spacer-y {
-    padding: 100px 0;
-}
-.intro-section.spacer-y {
     padding: 70px 0;
 }
+
+/* .intro-section.spacer-y {
+    padding: 70px 0;
+} */
 
 .mb-40 {
     margin-bottom: 40px;
@@ -121,6 +140,7 @@ img {
     left: 0;
     z-index: 10000000000000000;
 }
+
 .circle {
     pointer-events: none;
     height: 24px;
@@ -133,25 +153,29 @@ img {
 }
 
 .link {
-	--size: 1rem;
-	height: calc(var(--size) * 1.5);
-	overflow: hidden;
-	font-size: var(--size);
-	display: inline-block;
+    --size: 1rem;
+    height: calc(var(--size) * 1.5);
+    overflow: hidden;
+    font-size: var(--size);
+    display: inline-block;
 }
+
 .link:hover .letters {
-	transform: translateY(-100%);
+    transform: translateY(-100%);
 }
+
 /* ul li:last-child .link {
 	margin-bottom: 0;
 } */
 .link .block:last-child {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
+
 .link .letters {
-	display: inline-block;
-	transition: all 0.6s cubic-bezier(0.76, 0, 0.024, 1);
+    display: inline-block;
+    transition: all 0.6s cubic-bezier(0.76, 0, 0.024, 1);
 }
+
 /* custom components stylings ends */
 
 /* utils ends */
@@ -159,5 +183,11 @@ img {
 @media (min-width: 992px) {
     .container {
         max-width: 70%;
+    }
+}
+
+@media (max-width: 991px) {
+    #trail-cursor {
+        display: none;
     }
 }

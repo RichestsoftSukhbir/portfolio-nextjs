@@ -1,0 +1,19 @@
+.now-playing .song-wrapper {
+    display: inline-flex;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+.song-image .track-img {
+    max-width: 50px;
+    height: 100%;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+}
+.song-name {
+    padding-left: 10px;
+}
+.song-name.artist-wrap {
+    padding-left: 0;
+    padding: 0 10px;
+}
