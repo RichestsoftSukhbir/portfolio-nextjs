@@ -61,6 +61,8 @@ const spotifyAPI = async (_, res) => {
         .join(', '),
       albumImageUrl: responseData.item.album.images[0].url,
       songUrl: responseData.item.external_urls.spotify,
+      progress: responseData.progress_ms,
+      duration: responseData.item.duration_ms
     };
 
     res.status(200).json(data);
