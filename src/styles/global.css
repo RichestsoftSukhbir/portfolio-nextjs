@@ -5,6 +5,7 @@
     --glassmorph-bg: rgba(255, 255, 255, .25);
     --glassmorph-border: rgba(255, 255, 255, .18);
 
+    --gray-color: #222222;
     --body-color: #080c24;
     --spotify-color: #1ED760;
     --theme-text: #f5eded;
@@ -121,9 +122,6 @@ img {
     padding: 70px 0;
 }
 
-/* .intro-section.spacer-y {
-    padding: 70px 0;
-} */
 
 .mb-40 {
     margin-bottom: 40px;
@@ -164,9 +162,6 @@ img {
     transform: translateY(-100%);
 }
 
-/* ul li:last-child .link {
-	margin-bottom: 0;
-} */
 .link .block:last-child {
     color: var(--primary-color);
 }
@@ -191,3 +186,8 @@ img {
         display: none;
     }
 }
+/* @media (max-width: 767px) {
+    .link {
+        --size: 2.5rem;
+    }   
+} */

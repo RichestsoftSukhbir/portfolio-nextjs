@@ -70,5 +70,11 @@
             "22": "Astro Framework",
             "23": "Canva"
         }
+    },
+    "roles": {
+        "1": "Web Developer",
+        "2": "UI Designer",
+        "3": "Graphic Designer",
+        "4": "Product Designer"
     }
 }

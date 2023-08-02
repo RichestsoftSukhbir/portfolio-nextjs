@@ -6,6 +6,7 @@ import '@/styles/global.css';
 
 import Header from '@/components/header/header';
 import Footer from "@/components/footer/footer";
+import linkStyles from '@/components/header/header.module.css';
 import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {

@@ -34,3 +34,9 @@
         rotate: 360deg;
     }
 }
+
+@media (max-width: 991px) {
+    .blob-wrap {
+        display: none;
+    }
+}
