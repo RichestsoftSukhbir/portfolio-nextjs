@@ -16,16 +16,23 @@ export default function MarqueeText() {
                 <div className={`${styles['marquee-wrapper']} ${prompt.className}`} key={i}>
                     <h5 className='mb-0'>{roles[i]}</h5>
                     <Image width={20} height={20} src="/images/sparkel.svg" alt="" />
+                    <h2 className='secondary-color mb-0'>最強</h2>
+                    <span className='small-text text-uppercase text-center'>If You Don’t Take Risks,<br />You Can’t Create A Future.</span>
+                    <Image width={20} height={20} src="/images/sparkel.svg" alt="" />
                 </div>
             )
             text.push(textItems);
         }
         return text;
+
+        // 最強 = strongest
+        // 主人公 - Protagonist/Main Character
+        // 神 - GOD
     }
 
     return (
         <section className={`${styles['name-maruqee-wrap']} position-relative z-2`}>
-            <div className={`${styles['name-maruqee']} py-3`}>
+            <div className={`${styles['name-maruqee']} py-4`}>
                 <Marquee className='overflow-hidden' autoFill="true">
                     {rolesGen()}
                 </Marquee>
