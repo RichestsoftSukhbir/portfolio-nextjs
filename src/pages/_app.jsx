@@ -7,6 +7,7 @@ import '@/styles/global.css';
 import Header from '@/components/header/header';
 import Footer from "@/components/footer/footer";
 import { useEffect } from 'react';
+import Lenis from '@studio-freight/lenis'
 
 export default function MyApp({ Component, pageProps }) {
 
@@ -16,6 +17,17 @@ export default function MyApp({ Component, pageProps }) {
   //     e.classList.add(prompt.className);
   //   });
   // });
+
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
 
   useEffect(() => {
     let links = document.querySelectorAll(".link");

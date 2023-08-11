@@ -1,3 +1,27 @@
+.social-section {
+    position: relative;
+}
+.social-section::before,
+.social-section::after {
+    content: '神';
+    -webkit-text-stroke: 1px var(--theme-text);
+    font-size: 200px;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    color: transparent;
+    transform: translateY(-50%);
+    line-height: 1;
+    font-weight: 700;
+    opacity: .3;
+}
+.social-section::after {
+    -webkit-text-stroke: unset;
+    color: var(--primary-color);
+    top: calc(50% + 10px);
+    right: calc(15% + 10px);
+    text-shadow: 5px -5px var(--primary-color-900);
+}
 .social-list {
     display: flex;
     flex-wrap: wrap;

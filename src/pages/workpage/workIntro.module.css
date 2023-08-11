@@ -1,0 +1,25 @@
+.work-img-wrap {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work-wrap-blk {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-list .listWrap {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--glassmorph-border);
+}
+.work-list .listWrap:last-child {
+    padding-top: 60px;
+    border-bottom: unset;
+}
+
+.listWrap .desc {
+    font-size: 13px;
+}

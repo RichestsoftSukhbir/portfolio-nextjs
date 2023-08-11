@@ -1,5 +1,6 @@
 import styles from './social.module.css';
 import text from '@/config/text';
+import { prompt } from '@/utils/fonts';
 import { FaCodepen, FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa6';
 
 const { titles } = text;
@@ -18,8 +19,8 @@ export default function Social() {
     ];
 
     return (
-        <section className='social-section spacer-y'>
-            <div className="container">
+        <section className={`${styles['social-section']} spacer-y`}>
+            <div className="container position-relative z-2">
                 <h2 className='mb-40' dangerouslySetInnerHTML={{ __html: titles.social }}></h2>
                 <ul className={`list-unstyled ${styles['social-list']} m-0`}>
                     {socialEl.map((data, idx) => (

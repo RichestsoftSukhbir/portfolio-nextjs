@@ -69,6 +69,39 @@
             "21": "Next.js",
             "22": "Astro Framework",
             "23": "Canva"
+        },
+        "techCat": {
+            "1": "webDev",
+            "2": "webDev",
+            "3": "webDev",
+            "4": "webDesign",
+            "5": "webDesign",
+            "6": "gfxDesign",
+            "7": "gfxDesign",
+            "8": "toLearn",
+            "9": "webDev",
+            "10": "webDev",
+            "11": "webDev",
+            "12": "webDev",
+            "13": "webDesign",
+            "14": "webDev",
+            "15": "webDev",
+            "16": "toLearn",
+            "17": "toLearn",
+            "18": "toLearn",
+            "19": "webDesign",
+            "20": "cms",
+            "21": "webDev",
+            "22": "webDev",
+            "23": "gfxDesign"
+        },
+        "category": {
+            "1": "all",
+            "2": "gfxDesign",
+            "3": "webDesign",
+            "4": "webDev",
+            "5": "cms",
+            "6": "toLearn"
         }
     },
     "roles": {
@@ -76,5 +109,31 @@
         "2": "UI Designer",
         "3": "Graphic Designer",
         "4": "Product Designer"
+    },
+    "projects": {
+        "1": {
+            "img": "\/images\/project-images\/my-visa-usa.jpg",
+            "name": "My USA Visa",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui ratione odio nobis molestiae debitis esse et similique dolorum consectetur voluptatem aliquam, deserunt at!",
+            "link": "http://",
+            "techstack": {
+                "1": "nextjs",
+                "2": "html",
+                "3": "css",
+                "4": "js"
+            }
+        },
+        "2": {
+            "img": "\/images\/project-images\/my-visa-usa.jpg",
+            "name": "My USA Visa",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui ratione odio nobis molestiae debitis esse et similique dolorum consectetur voluptatem aliquam, deserunt at!",
+            "link": "http://",
+            "techstack": {
+                "1": "nextjs",
+                "2": "html",
+                "3": "css",
+                "4": "js"
+            }
+        }
     }
 }

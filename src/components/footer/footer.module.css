@@ -1,3 +1,4 @@
 .footer-wrapper {
     border-top: 1px solid var(--glassmorph-border);
+    backdrop-filter: blur(10px);
 }

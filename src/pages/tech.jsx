@@ -1,9 +1,10 @@
 import Link from "next/link";
+import TechIntro from "./techpage/techIntro-section/techIntro";
 
 export default function Tech() {
     return(
         <>
-            <h1>About Page</h1>
+            <TechIntro/>
         </>
     )
 }
