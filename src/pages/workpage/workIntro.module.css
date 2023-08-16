@@ -6,9 +6,25 @@
     justify-content: center;
     align-items: center;
 }
+.work-img-wrap img {
+    border-radius: 7px;
+}
 .work-wrap-blk {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    transition: all .5s ease;
+}
+.work-link {
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    color: var(--primary-color);
 }
 
 .work-list .listWrap {
@@ -22,4 +38,30 @@
 
 .listWrap .desc {
     font-size: 13px;
+}
+.listWrap .work-img-wrap {
+    display: none;
+}
+
+.preview {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    pointer-events: none;
+    transform-origin: center;
+    transform: scale(0);
+    z-index: 2;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+    .listWrap .work-img-wrap {
+        display: flex;
+    }
 }

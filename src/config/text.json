@@ -121,7 +121,8 @@
                 "2": "html",
                 "3": "css",
                 "4": "js"
-            }
+            },
+            "bg": "#262626"
         },
         "2": {
             "img": "\/images\/project-images\/my-visa-usa.jpg",
@@ -133,7 +134,8 @@
                 "2": "html",
                 "3": "css",
                 "4": "js"
-            }
+            },
+            "bg": "#fff"
         }
     }
 }

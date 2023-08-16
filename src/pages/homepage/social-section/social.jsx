@@ -8,14 +8,14 @@ const { titles } = text;
 export default function Social() {
 
     const socialEl = [
-        { icon: <FaFacebookF />, link: 'https://www.google.com' },
-        { icon: <FaTwitter />, link: 'https://www.google.com' },
-        { icon: <FaInstagram />, link: 'www.google.com' },
-        { icon: <FaLinkedinIn />, link: 'www.google.com' },
-        { icon: <FaEnvelope />, link: 'www.google.com' },
-        { icon: <FaGithub />, link: 'www.google.com' },
-        { icon: <FaWhatsapp />, link: 'www.google.com' },
-        { icon: <FaCodepen />, link: 'www.google.com' }
+        { icon: <FaFacebookF />, link: 'https://www.facebook.com/sukhhacking.yt.5' },
+        { icon: <FaTwitter />, link: 'https://twitter.com/sukh_fx' },
+        { icon: <FaInstagram />, link: 'https://www.instagram.com/sukhfx/' },
+        { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/sukhfx/' },
+        { icon: <FaEnvelope />, link: 'mailto:sukhbircing@gmail.com' },
+        { icon: <FaGithub />, link: 'https://github.com/sukhop' },
+        { icon: <FaWhatsapp />, link: 'https://wa.me/+918168387411' },
+        { icon: <FaCodepen />, link: 'https://codepen.io/sukhbir_singh' }
     ];
 
     return (
