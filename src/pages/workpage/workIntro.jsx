@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import {motion} from 'framer-motion';
 
 const { projects } = text;
 
@@ -18,7 +19,7 @@ export default function WorkIntro() {
         let count = Object.keys(projects).length;
         for (let i = 1; i <= count; i++) {
             let textItems = (
-                <li className={styles.listWrap} key={i}>
+                <motion.li initial={{ opacity: 0, translateY: 50 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .5, delay: i * .1 }} className={styles.listWrap} key={i}>
                     <div className="row g-4 align-items-center">
                         <div className="col-md-5">
                             <div className={`${styles['work-img-wrap']} mb-4`} style={{ background: `var(--bg), ${projects[i].bg}` }}>
@@ -42,7 +43,7 @@ export default function WorkIntro() {
                             <p className={`m-0 ${styles.desc}`}>{projects[i].desc}</p>
                         </div>
                     </div>
-                </li>
+                </motion.li>
             )
             work.push(textItems);
         }
