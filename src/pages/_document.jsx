@@ -22,7 +22,7 @@ export default function Document() {
                 <meta name="description" content="Hey, I am Sukhbir Singh. A Front-end Developer/Graphic Designer from India who loves to design and code." />
                 <meta name="keywords" content="portfolio sukhfx, portfolio sukhbir, sukhfx skills Sukhop, Sukhbir singh, Sukhop, sukhfxgod" />
 
-                <meta name="google-site-verification" content="gxcbKj3V4dUQa1wROJxT0uEMl4m8AxzxYi23dbm9l2I" />
+                <meta name="google-site-verification" content="shJXyPRlMaH-huGRnJEM7qcmrAN2sXrHT4eFHMi_r3I" />
             </Head>
             <body>
                 <Main />
