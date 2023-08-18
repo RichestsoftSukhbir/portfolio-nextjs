@@ -114,28 +114,82 @@
         "1": {
             "img": "\/images\/project-images\/my-visa-usa.jpg",
             "name": "My USA Visa",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui ratione odio nobis molestiae debitis esse et similique dolorum consectetur voluptatem aliquam, deserunt at!",
-            "link": "http://",
+            "desc": "I built a dynamic website for a USA Visa Company using NEXT.JS, offering seamless navigation, optimized speed, and responsive design. It provides secure form submissions and visa resources, serving as a trusted platform for those seeking help with the USA visa process.",
+            "link": "https://my-visa-usa.com/es",
             "techstack": {
-                "1": "nextjs",
-                "2": "html",
-                "3": "css",
-                "4": "js"
+                "1": "Next.Js",
+                "2": "HTML",
+                "3": "CSS",
+                "4": "JS",
+                "5": "GSAP"
             },
             "bg": "#262626"
         },
         "2": {
-            "img": "\/images\/project-images\/my-visa-usa.jpg",
-            "name": "My USA Visa",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui ratione odio nobis molestiae debitis esse et similique dolorum consectetur voluptatem aliquam, deserunt at!",
-            "link": "http://",
+            "img": "\/images\/project-images\/jkessay.jpg",
+            "name": "JK Essay",
+            "desc": "I designed a sleek website for an essay writing company, featuring easy navigation and a secure order form. It showcases the company's expertise, offers transparent pricing, and includes customer testimonials, creating a trustworthy platform for academic assistance.",
+            "link": "https://richestsoftsukhbir.github.io/essay/",
             "techstack": {
-                "1": "nextjs",
-                "2": "html",
-                "3": "css",
-                "4": "js"
+                "1": "HTML",
+                "2": "CSS",
+                "3": "JS",
+                "4": "Bootstrap"
             },
-            "bg": "#fff"
+            "bg": "#2f7870"
+        },
+        "3": {
+            "img": "\/images\/project-images\/sarena.jpg",
+            "name": "iSarena Jewerly",
+            "desc": "I created a captivating website for iSarena Jewelry Store, featuring elegant designs and user-friendly navigation. Customers can easily explore and purchase stunning jewelry collections with a secure online shopping experience. It's a platform that epitomizes luxury and beauty in the world of jewelry.",
+            "link": "https://richestsoftsukhbir.github.io/jewellery/",
+            "techstack": {
+                "1": "HTML",
+                "2": "CSS",
+                "3": "jQuery",
+                "4": "Bootstrap"
+            },
+            "bg": "#C2814E"
+        },
+        "4": {
+            "img": "\/images\/project-images\/nzuko.jpg",
+            "name": "Nzuko",
+            "desc": "I created a welcoming Tourist Guide website for travelers seeking local insights. It provides user-friendly navigation, detailed info on attractions, personalized tours, interactive maps, and expert guides, enabling seamless itinerary planning and unforgettable adventures.",
+            "link": "https://indeedtraining.in/nzuko/public/",
+            "techstack": {
+                "1": "HTML",
+                "2": "CSS",
+                "3": "jQuery",
+                "4": "Bootstrap",
+                "5": "Laravel"
+            },
+            "bg": "#D18B22"
+        },
+        "5": {
+            "img": "\/images\/project-images\/siesta.jpg",
+            "name": "Siesta Tourism",
+            "desc": "I created a welcoming Tourist Guide website for travelers seeking local insights. It provides user-friendly navigation, detailed info on attractions, personalized tours, interactive maps, and expert guides, enabling seamless itinerary planning and unforgettable adventures.",
+            "link": "https://richestsoftsukhbir.github.io/tourist/",
+            "techstack": {
+                "1": "HTML",
+                "2": "CSS",
+                "3": "jQuery",
+                "4": "Bootstrap"
+            },
+            "bg": "#20416f"
+        },
+        "6": {
+            "img": "\/images\/project-images\/popsmoke.jpg",
+            "name": "PopSmokeMedia",
+            "desc": "I built an immersive news and entertainment website for PopSmokeMedia. With a sleek design and seamless navigation, readers access articles, videos, and exclusive interviews easily. Real-time updates and interactivity offer an engaging experience, making the site a trusted source for capturing pop culture's pulse and delivering compelling stories.",
+            "link": "https://richestsoftsukhbir.github.io/newspaper/",
+            "techstack": {
+                "1": "HTML",
+                "2": "CSS",
+                "3": "JS",
+                "4": "Bootstrap"
+            },
+            "bg": "#0d0d0d"
         }
     }
 }

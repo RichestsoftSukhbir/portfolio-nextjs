@@ -1,29 +1,34 @@
 import styles from './workIntro.module.css';
 import fStyles from '@/pages/techpage/techIntro-section/techIntro.module.css'
 import text from '@/config/text'
-import { FaArrowUpRightFromSquare, FaLink } from 'react-icons/fa6';
+import { FaLink } from 'react-icons/fa6';
 import Image from 'next/image';
 import { gsap } from 'gsap';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const { projects } = text;
 
 export default function WorkIntro() {
+
+    const [isInside, setIsInside] = useState(false);
 
     function workGen() {
         let work = [];
         let count = Object.keys(projects).length;
         for (let i = 1; i <= count; i++) {
             let textItems = (
-                <li className={styles.listWrap} key={i} id={`p${i}`}>
+                <li className={styles.listWrap} key={i}>
                     <div className="row g-4 align-items-center">
                         <div className="col-md-5">
-                            <div className={`${styles['work-img-wrap']} mb-4`} style={{ background: `radial-gradient(transparent 40%, black), ${projects[i].bg}` }}>
+                            <div className={`${styles['work-img-wrap']} mb-4`} style={{ background: `var(--bg), ${projects[i].bg}` }}>
                                 <Image src={projects[i].img} width={500} height={500} className='work-img' alt={projects[i].name} />
                             </div>
                             <div className="position-relative">
                                 {/* <FaLink className={`${styles['work-link']}`} size={20}/> */}
-                                <h3 className='mb-3'>{projects[i].name}</h3>
+                                <Link target='_blank' href={projects[i].link} className={styles.workLink}>
+                                    <h3 className='mb-3'>{projects[i].name}</h3>
+                                </Link>
                                 <ul className={`list-unstyled ${fStyles['filterBtnWrap']}`}>
                                     {Object.keys(projects[i].techstack).map((data, idx) => {
                                         return (
@@ -50,8 +55,8 @@ export default function WorkIntro() {
 
         for (let i = 1; i <= count; i++) {
             let workImgItem = (
-                <div key={i} className={styles['work-img-wrap']} style={{ background: `radial-gradient(transparent 40%, black), ${projects[i].bg}` }} >
-                    <Image src={projects[i].img} width={500} height={500} className='work-img mb-3' alt={projects[i].name} />
+                <div className={`${styles['work-img-wrap']}`} key={i} style={{ background: `var(--bg), ${projects[i].bg}` }}>
+                    <Image src={projects[i].img} width={500} height={500} className='work-img' alt={projects[i].name} />
                 </div>
             )
             img.push(workImgItem);
@@ -59,69 +64,35 @@ export default function WorkIntro() {
         return img;
     }
 
-    // useEffect(()=> {
-    //     const projects = document.querySelector(`.${styles['work-list']}`);
-    //     const preview = document.querySelector(`.${styles['preview']}`);
-    //     const previewImg = document.querySelector(`.${styles['preview-img']}`);
-
-    //     let isInside = false;
-
-    //     const bgPos = {
-    //         p1: "0",
-    //         p2: "-300",
-    //         p3: "-600",
-    //         p4: "-900"
-    //     }
-
-    //     const moveStuff = (e) => {
-    //         const mouseInside = isMouseInsideContainer(e);
-    //         if(mouseInside != isInside) {
-    //             isInside = mouseInside;
-    //             if(isInside) {
-    //                 gsap.to(preview, 0.3, {
-    //                     scale: 1
-    //                 })
-    //             } else {
-    //                 gsap.to(preview, 0.3, {
-    //                     scale: 0
-    //                 })
-    //             }
-    //         }
-    //     }
-
-    //     const moveProject = (e) => {
-    //         const prevRect = preview.getBoundingClientRect();
-    //         const offsetX = prevRect.width / 2;
-    //         const offsetY = prevRect.height / 2;
-
-    //         preview.style.left = e.pageX - offsetX + "px";
-    //         preview.style.top = e.pageY - offsetY + "px";
-    //     }
-
-    //     const moveProjectImg = (e) => {
-    //         const projectID = e.id;
-    //         gsap.to(previewImg, .4, {
-    //             transform: (`translateY(${bgPos[projectID]})` || "-200")
-    //         })
-    //     }
-
-    //     const isMouseInsideContainer = (e) => {
-    //         const containerRect = projects.getBoundingClientRect();
-    //         console.log(containerRect);
-    //         return(
-    //             e.pageX >= containerRect.left &&
-    //             e.pageX <= containerRect.right &&
-    //             e.pageY >= containerRect.top &&
-    //             e.pageY <= containerRect.bottom 
-    //         );
-    //     };
-
-    //     window.addEventListener('mousemove', moveStuff);
-    //     Array.from(projects.children).forEach((e) => {
-    //         e.addEventListener('mousemove', moveProject);
-    //         e.addEventListener('mousemove', moveProjectImg.bind(null, projects));
-    //     });
-    // }, [])
+    useEffect(()=> {
+        const projects = document.querySelector(`.${styles['work-list']}`);
+        const preview = document.querySelector(`.${styles['preview']}`);
+        window.addEventListener("mousemove", (e)=> {
+            preview.animate({
+                left: `${e.clientX - 150}px`,
+                top: `${e.clientY - 150}px`
+            }, { duration: 3000, fill: 'forwards' });
+            projects.addEventListener('mouseenter', ()=>{
+                gsap.fromTo(preview, {
+                    scale: 0
+                }, {
+                    scale: 1
+                });
+                Array.from(projects.querySelectorAll(`.${styles.listWrap}`)).forEach((e, idx)=> {
+                    e.addEventListener('mousemove', ()=> {
+                        preview.querySelector(`.${styles['preview-img']}`).style.transform = `translateY(-${300 * idx}px)`;
+                    })
+                })
+            })
+            projects.addEventListener('mouseleave', ()=>{
+                gsap.fromTo(preview, {
+                    scale: 1
+                }, {
+                    scale: 0
+                });
+            });
+        })
+    },[])
 
     return (
         <section className="work-wrapper spacer-y">
