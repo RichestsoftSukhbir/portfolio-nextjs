@@ -3,6 +3,7 @@ import styles from './marqueeText.module.css';
 import Marquee from "react-fast-marquee";
 import { prompt } from '@/utils/fonts';
 import text from '@/config/text';
+import {motion} from 'framer-motion';
 
 const { roles } = text;
 
@@ -30,13 +31,27 @@ export default function MarqueeText() {
         // 神 - GOD
     }
 
+    const options = {
+        initial: {
+            opacity:0,
+            y:100
+        },
+        whileInView: {
+            opacity:1,
+            y:0
+        },
+        transition: {
+            duration: .5
+        }
+    }
+
     return (
-        <section className={`${styles['name-maruqee-wrap']} position-relative z-2`}>
+        <motion.section {...options} className={`${styles['name-maruqee-wrap']} position-relative z-2`}>
             <div className={`${styles['name-maruqee']} py-4`}>
                 <Marquee className='overflow-hidden' autoFill="true">
                     {rolesGen()}
                 </Marquee>
             </div>
-        </section>
+        </motion.section>
     )
 }

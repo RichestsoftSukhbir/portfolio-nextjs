@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const { projects } = text;
 
@@ -65,43 +65,97 @@ export default function WorkIntro() {
         return img;
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         const projects = document.querySelector(`.${styles['work-list']}`);
         const preview = document.querySelector(`.${styles['preview']}`);
-        window.addEventListener("mousemove", (e)=> {
+        let animationFrameId;
+
+        function updatePreviewPosition(e) {
             preview.animate({
                 left: `${e.clientX - 150}px`,
                 top: `${e.clientY - 150}px`
             }, { duration: 3000, fill: 'forwards' });
-            projects.addEventListener('mouseenter', ()=>{
-                gsap.fromTo(preview, {
-                    scale: 0
-                }, {
-                    scale: 1
-                });
-                Array.from(projects.querySelectorAll(`.${styles.listWrap}`)).forEach((e, idx)=> {
-                    e.addEventListener('mousemove', ()=> {
-                        preview.querySelector(`.${styles['preview-img']}`).style.transform = `translateY(-${300 * idx}px)`;
-                    })
-                })
-            })
-            projects.addEventListener('mouseleave', ()=>{
-                gsap.fromTo(preview, {
-                    scale: 1
-                }, {
-                    scale: 0
-                });
+        }
+
+        function throttle(callback, delay) {
+            let previousCall = 0;
+            return function (...args) {
+                const now = new Date().getTime();
+                if (now - previousCall >= delay) {
+                    previousCall = now;
+                    callback.apply(this, args);
+                }
+            };
+        }
+
+        function debounce(callback, delay) {
+            let timeoutId;
+            return function (...args) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    callback.apply(this, args);
+                }, delay);
+            };
+        }
+
+        function handleMouseEnter() {
+            gsap.fromTo(preview, {
+                scale: 0,
+            }, {
+                scale: 1,
             });
-        })
-    },[])
+
+            Array.from(projects.querySelectorAll(`.${styles.listWrap}`)).forEach((e, idx) => {
+                e.addEventListener('mousemove', debounce((event) => {
+                    preview.querySelector(`.${styles['preview-img']}`).style.transform = `translateY(-${300 * idx}px)`;
+                }, 10)); // Adjust the debounce delay as needed
+            });
+        }
+
+        function handleMouseLeave() {
+            gsap.fromTo(preview, {
+                scale: 1,
+            }, {
+                scale: 0,
+            });
+        }
+
+        function animatePreviewPosition(e) {
+            animationFrameId = requestAnimationFrame(() => {
+                updatePreviewPosition(e);
+            });
+        }
+
+        window.addEventListener("mousemove", throttle((e) => {
+            animatePreviewPosition(e);
+        }, 16)); // Throttle at approximately 60 FPS
+
+        projects.addEventListener('mouseenter', handleMouseEnter);
+        projects.addEventListener('mouseleave', handleMouseLeave);
+
+    }, []);
+
+    const options = {
+        initial: {
+            opacity:0,
+            y:50
+        },
+        whileInView: {
+            opacity:1,
+            y:0
+        },
+        transition: {
+            duration: .5
+        }
+    }
 
     return (
         <section className="work-wrapper spacer-y">
             <div className="container">
                 <div className="row mb-40">
                     <div className="col-lg-7 col-md-6">
-                        <h1 className='mb-3' dangerouslySetInnerHTML={{ __html: text.titles.work }}></h1>
-                        <p className='mb-4'>I&apos;ve been making various types of projects some of them were basics and some of them were complicated. So far I&apos;ve made 13+ projects.</p>
+                        <motion.h1 {...options} transition={{duration: .5}} className='mb-3' dangerouslySetInnerHTML={{ __html: text.titles.work }}></motion.h1>
+                        <motion.p {...options} transition={{duration: .5,delay: .3}} className='mb-4'>{text.workText[1]}</motion.p>
                     </div>
                 </div>
                 <div className="work-list-wrapper">

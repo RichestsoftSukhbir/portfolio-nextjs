@@ -1,7 +1,7 @@
 import styles from './social.module.css';
 import text from '@/config/text';
-import { prompt } from '@/utils/fonts';
 import { FaCodepen, FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa6';
+import {delay, motion} from 'framer-motion';
 
 const { titles } = text;
 
@@ -18,17 +18,33 @@ export default function Social() {
         { icon: <FaCodepen />, link: 'https://codepen.io/sukhbir_singh' }
     ];
 
+    let idx;
+
+    const options = {
+        initial: {
+            opacity:0,
+            y:50
+        },
+        whileInView: {
+            opacity:1,
+            y:0
+        },
+        transition: {
+            duration: .5
+        }
+    }
+
     return (
         <section className={`${styles['social-section']} spacer-y`}>
             <div className="container position-relative z-2">
-                <h2 className='mb-40' dangerouslySetInnerHTML={{ __html: titles.social }}></h2>
+                <motion.h2 {...options} className='mb-40' dangerouslySetInnerHTML={{ __html: titles.social }}></motion.h2>
                 <ul className={`list-unstyled ${styles['social-list']} m-0`}>
                     {socialEl.map((data, idx) => (
-                        <li key={idx}>
+                        <motion.li {...options} transition={{duration: .5, delay: .1 * idx}} key={idx}>
                             <a href={data.link} target='_blank' className={`${styles['social-btn']} theme_button`}>
                                 {data.icon}
                             </a>
-                        </li>
+                        </motion.li>
                     ))}
                 </ul>
             </div>

@@ -8,3 +8,7 @@
     font-size: 13px;
     border-radius: 5px;
 }
+
+.filter-button.active {
+    background-color: var(--primary-color);
+}

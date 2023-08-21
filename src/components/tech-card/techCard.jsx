@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './techCard.module.css';
 import introStyles from '@/pages/homepage/intro-section/intro.module.css';
 import text from '@/config/text';
-import { prompt } from '@/utils/fonts'
+import { prompt } from '@/utils/fonts';
 
 let { img, techText, techCat } = text.techCard;
 

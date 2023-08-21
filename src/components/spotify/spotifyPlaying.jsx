@@ -2,6 +2,7 @@ import useSWR from 'swr';
 import styles from './spotifyPlaying.module.css'
 import { FaSpotify } from 'react-icons/fa6';
 import { useMemo, useState } from 'react';
+import {motion} from 'framer-motion';
 
 export default function SpotifyPlaying() {
     const fetcher = (url) => fetch(url).then((r) => r.json());
@@ -13,6 +14,20 @@ export default function SpotifyPlaying() {
     //     return (data?.progress / data?.duration) * 100;
     // }
 
+    const options = {
+        initial: {
+            opacity:0,
+            y:20
+        },
+        whileInView: {
+            opacity:1,
+            y:0
+        },
+        transition: {
+            duration: .5
+        }
+    }
+
     return (
         <section className={`${styles['now-playing']} py-3`}>
             <div className="container">
@@ -20,18 +35,17 @@ export default function SpotifyPlaying() {
                     <div className={`${styles['song-image']}`}>
                         {data?.isPlaying ?
                             // eslint-disable-next-line @next/next/no-img-element
-                            (<img className={styles['track-img']} src={data?.albumImageUrl} alt={data?.album} />)
+                            (<motion.img {...options} className={styles['track-img']} src={data?.albumImageUrl} alt={data?.album} />)
                             :
-                            (<FaSpotify size={25} color={'var(--spotify-color)'} />
-                            )}
+                            (<motion.div {...options}><FaSpotify size={25} color={'var(--spotify-color)'} /></motion.div>)}
                     </div>
                     <div className={`${styles['song-name']} ${data?.isPlaying ? styles['artist-wrap'] : ''}`}>
-                        <p className='mb-0 fw-bold'>
+                        <motion.p {...options} transition={{duration:.5, delay:.3}} className='mb-0 fw-bold'>
                             {data?.isPlaying ? data.title : 'Not Listening'}
-                        </p>
-                        <p className='mb-0 small'>
+                        </motion.p>
+                        <motion.p {...options} transition={{duration:.5, delay:.6}} className='mb-0 small'>
                             {data?.isPlaying ? data.artist : ''}
-                        </p>
+                        </motion.p>
                     </div>
                 </a>
                 {/* {data?.isPlaying ? 
