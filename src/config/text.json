@@ -2,6 +2,7 @@
     "titles": {
         "intro": "Hello!<span>👋🏻</span>, I'm <span class=\"primary-color\">Sukhbir Singh.</span>",
         "about": ".about<span class=\"primary-color\">(me)</span>;",
+        "experience": ".experience<span class=\"primary-color\">(work)</span>;",
         "tech": ".techSkills<span class=\"primary-color\">()</span>",
         "work": ".work<span class=\"primary-color\">()</span>",
         "social": ".find<span class=\"primary-color\">(me)</span>"
@@ -12,9 +13,22 @@
     },
     "aboutText": {
         "1": "I am a 20-year-old self-taught <span class=\"primary-color fw-bold\">Graphic Designer & Front-End Web Developer</span> proficient in both fields. With 5 years of Graphic Designing and 2 years of Front-End Development experience, I've built and maintained numerous websites for clients.",
-        "2": "I am passionate about the technology industry and want to get involved in new opportunities.",
-        "3": "Worked at <span class=\"primary-color fw-bold\">Axionic Software</span> for 1.5 Years as a Web Developer and Graphic Designer.",
-        "4": "Currently I am working as Web Designer at <span class=\"primary-color fw-bold\">RichestSoft</span>."
+        "2": "I am passionate about the technology industry and want to get involved in new opportunities."
+    },
+    "experiences": {
+        "1": {
+            "companyName": "RichestSoft",
+            "designation": "Web Designer",
+            "year": "Oct 2022 - Present",
+            "description": "Currently I am working as Web Designer at <span class=\"primary-color fw-bold\">RichestSoft</span>."
+        },
+        "2": {
+            "companyName": "Axionic Software",
+            "designation": "Web Developer & Graphic Designer",
+            "year": "May 2021 - Oct 2022",
+            "description": "Worked at <span class=\"primary-color fw-bold\">Axionic Software</span> for 1.6 Years as a Web Developer and Graphic Designer."
+        }
+        
     },
     "workText": {
         "1": "I've been making various types of projects some of them were basics and some of them were complicated."
@@ -156,7 +170,7 @@
         "4": {
             "img": "\/images\/project-images\/nzuko.jpg",
             "name": "Nzuko",
-            "desc": "I created a welcoming Tourist Guide website for travelers seeking local insights. It provides user-friendly navigation, detailed info on attractions, personalized tours, interactive maps, and expert guides, enabling seamless itinerary planning and unforgettable adventures.",
+            "desc": "I designed a captivating website for storytelling and research, offering engaging narratives and insightful investigations. With a visually appealing layout, it sparks curiosity and fosters a community of passionate minds",
             "link": "https://indeedtraining.in/nzuko/public/",
             "techstack": {
                 "1": "HTML",
