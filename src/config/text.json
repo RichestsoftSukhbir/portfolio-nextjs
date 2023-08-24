@@ -19,13 +19,13 @@
         "1": {
             "companyName": "RichestSoft",
             "designation": "Web Designer",
-            "year": "Oct 2022 - Present",
+            "year": "// Oct 2022 - Present",
             "description": "Currently I am working as Web Designer at <span class=\"primary-color fw-bold\">RichestSoft</span>."
         },
         "2": {
             "companyName": "Axionic Software",
             "designation": "Web Developer & Graphic Designer",
-            "year": "May 2021 - Oct 2022",
+            "year": "// May 2021 - Oct 2022",
             "description": "Worked at <span class=\"primary-color fw-bold\">Axionic Software</span> for 1.6 Years as a Web Developer and Graphic Designer."
         }
         

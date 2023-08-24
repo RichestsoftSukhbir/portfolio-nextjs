@@ -1,6 +1,7 @@
 import styles from './experience.module.css';
 import text from '@/config/text';
 import { motion } from 'framer-motion';
+import { FaFileArrowDown } from 'react-icons/fa6';
 
 const { experiences } = text;
 
@@ -58,8 +59,7 @@ export default function Experience() {
                         {expGen()}
                     </ul>
                 </div>
-                <motion.a {...options} href="" className="theme_button">View my resume</motion.a>
-
+                <motion.a {...options} href='/docs/sukh_resume.pdf' className="theme_button">:resume() <FaFileArrowDown /></motion.a>
             </div>
         </section>
     )
