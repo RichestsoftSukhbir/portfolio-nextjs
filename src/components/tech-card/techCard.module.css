@@ -43,3 +43,12 @@
     padding-left: 0;
     border: none;
 }
+
+@media (max-width: 575px) {
+    .tech-wrapper:not(.sm) {
+        flex-direction: column;
+    }
+    .tech-wrapper:not(.sm) .tech-text {
+        display: none;
+    }
+}

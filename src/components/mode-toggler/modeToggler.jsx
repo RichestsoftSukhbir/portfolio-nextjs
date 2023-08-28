@@ -41,10 +41,10 @@ export default function ModeToggler() {
 
     return (
         <>
-            <div class={styles['theme-switch-wrapper']}>
-                <label class={styles['theme-switch']} for="checkbox">
+            <div className={styles['theme-switch-wrapper']}>
+                <label className={styles['theme-switch']} for="checkbox">
                     <input type="checkbox" id="checkbox" />
-                    <div class={`${styles['slider']} ${styles['round']}`}></div>
+                    <div className={`${styles['slider']} ${styles['round']}`}></div>
                 </label>
             </div>
         </>

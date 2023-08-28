@@ -13,7 +13,7 @@ export default function TechIntro() {
         let count = Object.keys(techText).length;
         for (let i = 1; i <= count; i++) {
             let textItems = (
-                <motion.div className={`skill-wrapper ${techCat[i]} col-lg-4 col-sm-6`}
+                <motion.div className={`skill-wrapper ${techCat[i]} col-lg-4 col-sm-6 col-4`}
                     key={i}
                     initial={{ opacity: 0, translateY: 50 }}
                     animate={{ opacity: 1, translateY: 0 }}
