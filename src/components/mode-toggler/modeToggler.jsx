@@ -42,7 +42,7 @@ export default function ModeToggler() {
     return (
         <>
             <div className={styles['theme-switch-wrapper']}>
-                <label className={styles['theme-switch']} for="checkbox">
+                <label className={styles['theme-switch']} htmlFor="checkbox">
                     <input type="checkbox" id="checkbox" />
                     <div className={`${styles['slider']} ${styles['round']}`}></div>
                 </label>
