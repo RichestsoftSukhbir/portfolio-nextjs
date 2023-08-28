@@ -1,12 +1,14 @@
 import text from '@/config/text';
 import styles from './footer.module.css'
 import SpotifyPlaying from '../spotify/spotifyPlaying';
+import BgMusic from '../bg-music/bgmusic';
 // import Blob from '../blob/blob';
 
 export default function Footer() {
     return (
         <>
             <SpotifyPlaying />
+            {/* <BgMusic/> */}
             <footer className={`py-3 ${styles['footer-wrapper']}`}>
                 {/* <Blob/> */}
                 <svg className='d-none'>

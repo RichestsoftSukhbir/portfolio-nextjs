@@ -15,6 +15,23 @@
     --theme-text-invert: #0a1212;
 }
 
+[data-theme="light"] {
+    --primary-color: #8843f2;
+    --primary-color-900: #8843f2;
+    --primary-transparent: rgba(171, 241, 67, 0);
+    
+    --secondary-color: #abf143;
+
+    --glassmorph-bg: rgba(0, 0, 0, .25);
+    --glassmorph-border: rgba(0, 0, 0, .18);
+
+    --gray-color: #222222;
+    --body-color: #f5efff;
+    --spotify-color: #1ED760;
+    --theme-text: #0a1212;
+    --theme-text-invert: #f5eded;
+}
+
 ::-moz-selection {
     color: var(--theme-text);
     background: var(--primary-color-900);
@@ -49,6 +66,7 @@ body {
     font-size: clamp(0.875rem, 0.8154rem + 0.2981vw, 1rem);
     color: var(--theme-text);
     background-color: var(--body-color);
+    transition: all .3s ease;
 }
 
 body::before,
@@ -129,7 +147,7 @@ html.lenis {
 .theme_button {
     display: inline-block;
     padding: 1rem 2.5rem;
-    color: #f5eded;
+    color: var(--theme-text);
     border-radius: 10px;
     background: var(--glassmorph-bg);
     backdrop-filter: blur(7px);

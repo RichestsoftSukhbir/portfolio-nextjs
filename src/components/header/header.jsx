@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 
 import TrailCursor from '../train-cursor/trailCursor';
 import { useEffect, useState } from 'react';
+import ModeToggler from '../mode-toggler/modeToggler';
 
 export function useMediaQuery(query) {
     const [matches, setMatches] = useState(false);
@@ -98,6 +99,7 @@ export default function Header() {
                                 <li><Link href='/tech' className='link' onClick={() => setNavOpen(false)}>.tech()</Link></li>
                                 <li><Link href='mailto:sukhbircing@gmail.com' className='link' onClick={() => setNavOpen(false)}>.contact()</Link></li>
                             </motion.ul>
+                            <ModeToggler/>
                             <div id={styles['hamburger']} className={`d-block d-md-none ${navOpen ? styles['open'] : ''}`} onClick={() => setNavOpen(!navOpen)}>
                                 <svg width="30" height="30" viewBox="0 0 100 100">
                                     <path className={`${styles['line']} ${styles['line1']}`} d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />

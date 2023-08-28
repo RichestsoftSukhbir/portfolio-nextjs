@@ -27,6 +27,12 @@
     flex: 0 0 auto;
 }
 
+.item-right {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+}
+
 .logo {
     display: flex;
     gap: 10px;
@@ -44,6 +50,11 @@
 
 .logo img {
     width: 30px;
+    transition: all .3s ease;
+}
+
+[data-theme="light"] .logo img {
+    filter: invert();
 }
 
 .menu-list {
@@ -102,6 +113,9 @@
 }
 
 @media (max-width: 767px) {
+    .item-right {
+        gap: 0 5px;
+    }
     .menu-list {
         position: absolute;
         flex-direction: column;

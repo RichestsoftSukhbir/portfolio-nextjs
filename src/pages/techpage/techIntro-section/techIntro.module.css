@@ -10,5 +10,6 @@
 }
 
 .filter-button.active {
+    color: #f5eded;
     background-color: var(--primary-color);
 }

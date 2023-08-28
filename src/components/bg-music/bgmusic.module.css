@@ -1,0 +1,84 @@
+.music-toggle {
+    --size: 60px;
+    line-height: 1;
+    font-size: 8px;
+    width: var(--size);
+    height: var(--size);
+    color: var(--theme-text);
+    border: 1px solid var(--primary-color);
+    border-block-color: transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+
+    /* mix-blend-mode: difference; */
+}
+
+.music-toggle::after {
+    --size: 90%;
+    content: '';
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    border-radius: 50%;
+    border-inline-color: var(--theme-text);
+    animation: rotate 10s infinite linear;
+    transform-origin: center;
+}
+
+.music-toggle::before {
+    content: '';
+    width: 2px;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-block: 2px solid var(--secondary-color);
+    animation: rotate 10s infinite linear;
+}
+
+.music-visualizer {
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.music-visualizer div {
+    display: inline-block;
+    width: 1px;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: .1s;
+}
+
+.toggle-text::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+    content: '';
+    width: 75%;
+    height: 75%;
+    background-color: var(--glassmorph-bg);
+    backdrop-filter: blur(2px);
+}
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }    
+}
