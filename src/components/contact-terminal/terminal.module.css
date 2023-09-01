@@ -80,9 +80,21 @@
     resize: none;
 }
 
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover, 
+.input:-webkit-autofill:focus, 
+.input:-webkit-autofill:active  {
+    -webkit-text-fill-color: var(--theme-text);
+    -webkit-box-shadow: 0 0 0 40px var(--body-color) inset !important;
+}
+
 .submitBtn {
     padding: 10px 20px;
     font-size: 12px;
+}
+
+.pointer {
+    pointer-events: none;
 }
 
 @media (max-width: 767px) {
