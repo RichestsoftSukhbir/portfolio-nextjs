@@ -2,6 +2,7 @@ import text from '@/config/text';
 import styles from './footer.module.css'
 import SpotifyPlaying from '../spotify/spotifyPlaying';
 import BgMusic from '../bg-music/bgmusic';
+import {prompt} from '@/utils/fonts';
 // import Blob from '../blob/blob';
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
         <>
             <SpotifyPlaying />
             {/* <BgMusic/> */}
-            <footer className={`py-3 ${styles['footer-wrapper']}`}>
+            <footer className={`py-3 ${styles['footer-wrapper']} ${prompt.className}`}>
                 {/* <Blob/> */}
                 <svg className='d-none'>
                     <filter id='f'>

@@ -25,8 +25,6 @@ export default function Experience() {
         let expList = [];
         let count = Object.keys(experiences).length;
 
-        console.log(count);
-
         for (let i = 1; i <= count; i++) {
             let expData = (
                 <motion.li {...options} key={i} className={styles['exp-list']}>

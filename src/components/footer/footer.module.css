@@ -1,4 +1,5 @@
 .footer-wrapper {
-    border-top: 1px solid var(--glassmorph-border);
+    /* border-top: 1px solid var(--glassmorph-border); */
     backdrop-filter: blur(10px);
+    font-size: 14px;
 }

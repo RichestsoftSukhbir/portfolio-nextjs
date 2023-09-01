@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import TrailCursor from '../train-cursor/trailCursor';
 import { useEffect, useState } from 'react';
 import ModeToggler from '../mode-toggler/modeToggler';
+import Terminal from '../contact-terminal/terminal';
 
 export function useMediaQuery(query) {
     const [matches, setMatches] = useState(false);
@@ -42,6 +43,9 @@ export function useMediaQuery(query) {
 
 
 export default function Header() {
+
+    const [open, setOpen] = useState(false);
+    const handlerSetOpen = () => setOpen(!open);
 
     const isSmall = useMediaQuery("(max-width: 767px)");
 
@@ -97,7 +101,7 @@ export default function Header() {
                                 <li><Link href='/' className='link' onClick={() => setNavOpen(false)}>.home()</Link></li>
                                 <li><Link href='/work' className='link' onClick={() => setNavOpen(false)}>.work()</Link></li>
                                 <li><Link href='/tech' className='link' onClick={() => setNavOpen(false)}>.tech()</Link></li>
-                                <li><Link href='mailto:sukhbircing@gmail.com' className='link' onClick={() => setNavOpen(false)}>.contact()</Link></li>
+                                <li><Link href='#!' className='link' onClick={() => {setNavOpen(false); handlerSetOpen()}}>.contact()</Link></li>
                             </motion.ul>
                             <ModeToggler/>
                             <div id={styles['hamburger']} className={`d-block d-md-none ${navOpen ? styles['open'] : ''}`} onClick={() => setNavOpen(!navOpen)}>
@@ -112,6 +116,7 @@ export default function Header() {
                 </div>
             </header>
             <TrailCursor />
+            <Terminal open={open} setOpen={handlerSetOpen}/>
         </>
     )
 }

@@ -1,6 +1,6 @@
 import styles from './social.module.css';
 import text from '@/config/text';
-import { FaCodepen, FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa6';
+import { FaCodepen, FaDiscord, FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa6';
 import {delay, motion} from 'framer-motion';
 
 const { titles } = text;
@@ -15,7 +15,8 @@ export default function Social() {
         { icon: <FaEnvelope />, link: 'mailto:sukhbircing@gmail.com' },
         { icon: <FaGithub />, link: 'https://github.com/sukhop' },
         { icon: <FaWhatsapp />, link: 'https://wa.me/+918168387411' },
-        { icon: <FaCodepen />, link: 'https://codepen.io/sukhbir_singh' }
+        { icon: <FaCodepen />, link: 'https://codepen.io/sukhbir_singh' },
+        { icon: <FaDiscord />, link: 'https://discord.com/users/457830738923094028' }
     ];
 
     let idx;

@@ -16,10 +16,10 @@ export default function MarqueeText() {
             let textItems = (
                 <div className={`${styles['marquee-wrapper']} ${prompt.className}`} key={i}>
                     <h5 className='mb-0'>{roles[i]}</h5>
-                    <Image width={20} height={20} src="/images/sparkel.svg" alt="" />
+                    <Image width={20} height={20} src="/images/sparkel.svg" alt="sparkel" />
                     <h2 className='secondary-color mb-0'>最強</h2>
                     <span className='small-text text-uppercase text-center'>If You Don’t Take Risks,<br />You Can’t Create A Future.</span>
-                    <Image width={20} height={20} src="/images/sparkel.svg" alt="" />
+                    <Image width={20} height={20} src="/images/sparkel.svg" alt="sparkel" />
                 </div>
             )
             text.push(textItems);
