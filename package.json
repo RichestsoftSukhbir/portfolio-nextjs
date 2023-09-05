@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-fast-marquee": "^1.6.0",
     "react-icons": "^4.10.1",
-    "swr": "^2.2.0"
+    "swr": "^2.2.0",
+    "yup": "^1.2.0"
   }
 }
