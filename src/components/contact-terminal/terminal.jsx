@@ -328,7 +328,7 @@ export default function Terminal({ open, setOpen }) {
                                     Sending details to the owner...
                                 </div>
                             </motion.div>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .2 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .6 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
@@ -336,7 +336,7 @@ export default function Terminal({ open, setOpen }) {
                                     &#123;
                                 </div>
                             </motion.div>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .4 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .8 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
@@ -344,7 +344,7 @@ export default function Terminal({ open, setOpen }) {
                                     &nbsp;&nbsp;&quot;name&quot;: <span className="primary-color">&quot;{values.name}&quot;</span>
                                 </div>
                             </motion.div>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .6 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: 1 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
@@ -352,7 +352,7 @@ export default function Terminal({ open, setOpen }) {
                                     &nbsp;&nbsp;&quot;email&quot;: <span className="primary-color">&quot;{values.email}&quot;</span>
                                 </div>
                             </motion.div>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .8 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: 1.2 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
@@ -360,7 +360,7 @@ export default function Terminal({ open, setOpen }) {
                                     &nbsp;&nbsp;&quot;subject&quot;: <span className="primary-color">&quot;{values.subject}&quot;</span>
                                 </div>
                             </motion.div>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: 1 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: 1.4 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
@@ -368,7 +368,7 @@ export default function Terminal({ open, setOpen }) {
                                     &#125;
                                 </div>
                             </motion.div>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: 1.2 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: 1.6 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
