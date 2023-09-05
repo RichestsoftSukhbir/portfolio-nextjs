@@ -320,7 +320,7 @@ export default function Terminal({ open, setOpen }) {
                         </motion.div>
                         :
                         <motion.div className={`${styles['form-send']}`}>
-                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0 } }}>
+                            <motion.div className={styles['data-row']} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0, delay: .1 } }}>
                                 <div className={styles['data-time']}>
                                     [{hours}:{minutes}:{seconds} {amPm}]
                                 </div>
