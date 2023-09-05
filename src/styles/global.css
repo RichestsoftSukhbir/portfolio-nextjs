@@ -134,6 +134,10 @@ html.lenis {
 /* lenis ends */
 
 /* utils */
+.button-reset {
+    background-color: transparent;
+    border: 0;
+}
 .button-group {
     display: flex;
     flex-wrap: wrap;
@@ -202,6 +206,7 @@ html.lenis {
 }
 
 .link {
+    color: var(--theme-text);
     --size: 1rem;
     height: calc(var(--size) * 1.5);
     overflow: hidden;

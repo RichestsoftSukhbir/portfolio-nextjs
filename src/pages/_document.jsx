@@ -23,9 +23,7 @@ export default function Document() {
                 <meta name="keywords" content="portfolio sukhfx, portfolio sukhbir, sukhfx skills Sukhop, Sukhbir singh, Sukhop, sukhfxgod" />
 
                 <meta name="google-site-verification" content="shJXyPRlMaH-huGRnJEM7qcmrAN2sXrHT4eFHMi_r3I" />
-
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6045708605795853"
-                    crossOrigin="anonymous"></script>
+                
             </Head>
             <body>
                 <Main />

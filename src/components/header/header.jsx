@@ -47,6 +47,16 @@ export default function Header() {
     const [open, setOpen] = useState(false);
     const handlerSetOpen = () => setOpen(!open);
 
+    useEffect(()=>{
+        const contactTrigger = document.querySelectorAll('.contact-toggler');
+        if(contactTrigger) {
+            contactTrigger.forEach(e=>{
+                e.addEventListener('click', handlerSetOpen);
+            });
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const isSmall = useMediaQuery("(max-width: 767px)");
 
     const [navOpen, setNavOpen] = useState(false);
@@ -91,7 +101,7 @@ export default function Header() {
                         <div className={styles['item-left']}>
                             <Link href='/'>
                                 <div className={styles['logo']}>
-                                    <Image src={sukhfxLogo} alt="logo" priority={true} />
+                                    <Image src={sukhfxLogo} alt="logo" height={30} width={30} />
                                     <span className={`logo-text mb-0 ${prompt.className}`}>sukh<span className='primary-color'>fx</span></span>
                                 </div>
                             </Link>
