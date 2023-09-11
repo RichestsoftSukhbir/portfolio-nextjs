@@ -12,7 +12,9 @@ export default function Intro() {
 
     // age script
     useEffect(() => {
-        document.querySelector('.age').innerText = calculateAge('2002-09-08');
+        document.querySelectorAll('.age').forEach((e)=>{
+            e.innerText = calculateAge('2002-09-08');
+        })
     })
 
     function calculateAge(birthDate) {
@@ -52,7 +54,7 @@ export default function Intro() {
                         <motion.h1 initial={ani.init} whileInView={ani.inView} transition={{duration: .5}} dangerouslySetInnerHTML={{ __html: text.titles.intro }} className="mb-4" />
                         <motion.h6 initial={ani.init} whileInView={ani.inView} transition={{duration: .5, delay:.3}} dangerouslySetInnerHTML={{ __html: text.subText.introSub }} className="mb-4" />
                         <motion.div initial={ani.init} whileInView={ani.inView} transition={{duration:.5, delay:.6}} className="button-group">
-                            <button type="button" className={`theme_button contact-toggler ${styles['intro-button']}`}>:hireMe() <FaUserTie /></button>
+                            <Link href="mailto:sukhbircing@gmail.com" className={`theme_button ${styles['intro-button']}`}>:hireMe() <FaUserTie /></Link>
                             <Link href='/docs/sukh_resume.pdf' className={`theme_button ${styles['intro-button']}`}>:resume() <FaFileArrowDown /></Link>
                         </motion.div>
                     </div>

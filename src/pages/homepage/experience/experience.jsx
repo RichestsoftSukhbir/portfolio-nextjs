@@ -57,7 +57,7 @@ export default function Experience() {
                         {expGen()}
                     </ul>
                 </div>
-                <motion.a {...options} href='/docs/sukh_resume.pdf' className="theme_button">:resume() <FaFileArrowDown /></motion.a>
+                <motion.a {...options} href='/docs/sukh_resume.pdf' className={`theme_button ${styles.expBtn}`}>:resume() <FaFileArrowDown /></motion.a>
             </div>
         </section>
     )
