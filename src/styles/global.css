@@ -11,6 +11,7 @@
     --error-color: #C91432;
     --gray-color: #222222;
     --body-color: #080c24;
+    --body-color-invert: #f5efff;
     --body-color-light: #131835;
     --spotify-color: #1ED760;
     --theme-text: #f5eded;
@@ -24,6 +25,7 @@
     --glassmorph-border: rgba(0, 0, 0, .18);
 
     --body-color: #f5efff;
+    --body-color-invert: #080c24;
     --body-color-light: #eee4ff;
     --theme-text: #0a1212;
     --theme-text-invert: #f5eded;
@@ -134,6 +136,9 @@ html.lenis {
 /* lenis ends */
 
 /* utils */
+.os-scrollbar .os-scrollbar-handle {
+    background: var(--body-color-invert) !important;
+}
 .button-reset {
     background-color: transparent;
     border: 0;

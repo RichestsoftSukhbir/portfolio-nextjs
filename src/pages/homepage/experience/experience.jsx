@@ -51,7 +51,7 @@ export default function Experience() {
         <section className="work-experience spacer-y">
             <div className="container">
                 <motion.h2 {...options} dangerouslySetInnerHTML={{ __html: text.titles.experience }} />
-                <motion.p {...options} transition={{ duration: .5, delay: .3 }} className='mb-40'>Here&apos;s a brief rundown of my most recent experiences.</motion.p>
+                <motion.p {...options} transition={{ duration: .5, delay: .3 }} className='mb-40'>{text.subText.expSub}</motion.p>
                 <div className={`${styles['experience-wrap']} mb-40`}>
                     <ul className='list-unstyled m-0'>
                         {expGen()}

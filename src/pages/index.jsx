@@ -4,6 +4,7 @@ import Intro from "./homepage/intro-section/intro"
 import Social from "./homepage/social-section/social"
 import MarqueeText from "./homepage/scroll-marquee/marqueeText"
 import Experience from "./homepage/experience/experience"
+import RecentWatch from "./homepage/recent-watch/recentWatch"
 
 export default function Index() {
     return (
@@ -16,6 +17,7 @@ export default function Index() {
                 <MarqueeText />
                 <About />
                 <Experience/>
+                <RecentWatch/>
                 <Social />
             </main>
         </>
