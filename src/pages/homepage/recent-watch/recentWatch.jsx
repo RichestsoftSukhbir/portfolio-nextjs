@@ -32,7 +32,7 @@ export default function RecentWatch() {
                 <OverlayScrollbarsComponent element="div" className={`${styles['watch-wrap']}`} defer>
                     {Object.keys(watch).map((data) => {
                         return (
-                            <div className={`${styles['watch-card']}`} key={data}>
+                            <motion.div {...options} className={`${styles['watch-card']}`} key={data}>
                                 <div className={`${styles['poster']}`}>
                                     <div className={`${styles['status']} ${styles[`${watch[data].status.toLowerCase()}`]}`}>
                                         {watch[data].status}
@@ -49,7 +49,7 @@ export default function RecentWatch() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
                 </OverlayScrollbarsComponent>

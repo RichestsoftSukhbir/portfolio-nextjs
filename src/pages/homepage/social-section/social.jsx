@@ -1,7 +1,7 @@
 import styles from './social.module.css';
 import text from '@/config/text';
-import { FaCodepen, FaDiscord, FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa6';
-import {delay, motion} from 'framer-motion';
+import { FaCodepen, FaDiscord, FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
+import {motion} from 'framer-motion';
 
 const { titles } = text;
 
@@ -9,7 +9,7 @@ export default function Social() {
 
     const socialEl = [
         { icon: <FaFacebookF />, link: 'https://www.facebook.com/sukhhacking.yt.5' },
-        { icon: <FaTwitter />, link: 'https://twitter.com/sukh_fx' },
+        { icon: <FaXTwitter />, link: 'https://twitter.com/sukh_fx' },
         { icon: <FaInstagram />, link: 'https://www.instagram.com/sukhfx/' },
         { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/sukhfx/' },
         { icon: <FaEnvelope />, link: 'mailto:sukhbircing@gmail.com' },
