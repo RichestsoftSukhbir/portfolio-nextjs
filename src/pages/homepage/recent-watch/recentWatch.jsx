@@ -37,7 +37,7 @@ export default function RecentWatch() {
                                     <div className={`${styles['status']} ${styles[`${watch[data].status.toLowerCase()}`]}`}>
                                         {watch[data].status}
                                     </div>
-                                    <Image src={watch[data].poster} width={300} height={426} alt={watch[data].name} />
+                                    <Image src={watch[data].poster} width={170} height={241} alt={watch[data].name} />
                                 </div>
                                 <div className={styles['watch-content']}>
                                     <div className={`${styles['info']} mb-2`} title={watch[data].name}>{watch[data].name}</div>

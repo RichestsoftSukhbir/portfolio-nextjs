@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 import { useEffect, useRef } from "react";
 import { FaFileArrowDown, FaUserTie } from 'react-icons/fa6'
 import Image from "next/image";
-import profileImage from '../../../../public/images/portfolio_image.webp'
+import profileImage from '../../../../public/images/profile-image.webp'
 import TechCard from "@/components/tech-card/techCard";
 
 export default function Intro() {
