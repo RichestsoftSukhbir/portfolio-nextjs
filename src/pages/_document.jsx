@@ -6,6 +6,13 @@ export default function Document() {
         <Html lang="en">
             <Head>
                 <link rel='shortcut icon' href='/images/sukhop-favicon.svg' />
+                <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+                <link rel="manifest" href="/images/favicon/site.webmanifest" />
+                <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5319ac" />
+                <meta name="msapplication-TileColor" content="#5319ac" />
+                <meta name="theme-color" content="#5319ac" />
 
                 <meta name="description" content="Hey, I am Sukhbir Singh. A Front-end Developer/Graphic Designer from India who loves to design and code." />
                 <meta name="keywords" content="portfolio sukhfx, portfolio sukhbir, sukhfx skills Sukhop, Sukhbir singh, Sukhop, sukhfxgod" />
