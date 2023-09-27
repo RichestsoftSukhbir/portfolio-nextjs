@@ -15,7 +15,7 @@ export default function Document() {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Sukh - Professional Web & Graphic Desinger" />
                 <meta property="og:description" content="Hey, I am Sukhbir Singh. A Front-end Developer/Graphic Designer from India who loves to design and code." />
-                <meta property="og:image" content="https://sukhop.vercel.app/images/web-preview.png" />
+                <meta property="og:image" content="https://sukhop.vercel.app/images/web-preview.webp" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="sukhop.vercel.app" />
