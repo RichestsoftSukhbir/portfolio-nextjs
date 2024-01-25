@@ -15,7 +15,7 @@
         "recentSub": "My recent watched Movies and TV Series & recently read books."
     },
     "aboutText": {
-        "1": "I am a <span class=\"age\"></span>-year-old self-taught <span class=\"primary-color fw-bold\">Graphic Designer & Front-End Web Developer</span> proficient in both fields. With 5 years of Graphic Designing and 2 years of Front-End Development experience, I've built and maintained numerous websites for clients.",
+        "1": "I am a <span ref=\"age\" class=\"age\"></span>-year-old self-taught <span class=\"primary-color fw-bold\">Graphic Designer & Front-End Web Developer</span> proficient in both fields. With 5 years of Graphic Designing and 2 years of Front-End Development experience, I've built and maintained numerous websites for clients.",
         "2": "I am passionate about the technology industry and want to get involved in new opportunities."
     },
     "experiences": {
